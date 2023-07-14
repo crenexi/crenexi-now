@@ -1,0 +1,22 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      nodejs: 16
+  build:
+    commands:
+      - echo Starting configuration...
+      - npm run configure
+
+      - echo Installing NPM dependencies...
+      - npm ci --include=dev
+
+      - echo Build started on `date`
+      - npm run build:dev
+  post_build:
+    commands:
+      - echo Build completed on `date`
+artifacts:
+  files:
+    - '**/*'
+  base-directory: dist

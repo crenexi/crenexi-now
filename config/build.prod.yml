@@ -1,0 +1,26 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      nodejs: 16
+  build:
+    commands:
+      - echo Starting configuration...
+      - npm run configure
+
+      - echo Installing NPM dependencies...
+      - npm ci
+
+      - echo Build started on `date`
+      - npm run build:prod
+  post_build:
+    commands:
+      - echo Build completed on `date`
+
+      # For CICD with "test" endpoint
+      # - echo Deploying assets from test to stage...
+      # - npm run deploy:assets -- stage
+artifacts:
+  files:
+    - '**/*'
+  base-directory: dist

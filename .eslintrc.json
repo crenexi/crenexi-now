@@ -1,0 +1,123 @@
+{
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": "latest",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "extends": ["airbnb"],
+  "plugins": [
+    "react",
+    "react-hooks",
+    "jsx-a11y",
+    "import"
+  ],
+  "env": {
+    "node": true,
+    "browser": true
+  },
+  "globals": {
+    "document": "readonly",
+    "navigator": "readonly",
+    "window": "readonly"
+  },
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "webpack.config.js"
+      }
+    }
+  },
+  "rules": {
+    "no-unused-vars": "warn",
+    "comma-dangle": ["error", "always-multiline"],
+    "array-bracket-spacing": ["error", "never"],
+    "brace-style": ["error", "1tbs", {
+      "allowSingleLine": true
+    }],
+    "camelcase": ["warn", {
+      "properties": "always"
+    }],
+    "comma-spacing": ["error", {
+      "before": false,
+      "after": true
+    }],
+    "comma-style": "error",
+    "computed-property-spacing": ["error", "never"],
+    "eol-last": "warn",
+    "indent": ["error", 2, {
+      "SwitchCase": 1
+    }],
+    "key-spacing": ["error", {
+      "afterColon": true
+    }],
+    "lines-around-comment": ["error", {
+      "beforeBlockComment": true,
+      "allowBlockStart": true
+    }],
+    "no-multiple-empty-lines": "error",
+    "no-spaced-func": "error",
+    "no-trailing-spaces": ["error", {
+      "skipBlankLines": false
+    }],
+    "quotes": ["error", "single", {
+      "allowTemplateLiterals": true
+    }],
+    "semi-spacing": ["error", {
+      "after": true
+    }],
+    "space-before-blocks": ["error", "always"],
+    "space-infix-ops": "error",
+    "arrow-parens": ["error", "always"],
+    "arrow-spacing": ["error", {
+      "before": true,
+      "after": true
+    }],
+    "arrow-body-style": "off",
+    "no-const-assign": "error",
+    "no-this-before-super": "error",
+    "no-var": "error",
+    "max-len": "off",
+    "object-curly-newline": ["error", {
+      "ObjectExpression": {
+        "minProperties": 7,
+        "multiline": true,
+        "consistent": true
+      },
+      "ObjectPattern": {
+        "minProperties": 7,
+        "multiline": true,
+        "consistent": true
+      },
+      "ImportDeclaration": {
+        "minProperties": 7,
+        "multiline": true,
+        "consistent": true
+      },
+      "ExportDeclaration": {
+        "minProperties": 7,
+        "multiline": true,
+        "consistent": true
+      }
+    }],
+    "no-shadow": "off",
+    "prefer-destructuring": "off",
+    "import/no-extraneous-dependencies": ["error", {
+      "devDependencies": true
+    }],
+    "import/no-cycle": ["error", {
+      "maxDepth": 1,
+      "ignoreExternal": true
+    }],
+    "react/function-component-definition": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+    "react/state-in-constructor": ["error", "never"],
+    "react/jsx-fragments": ["warn", "element"],
+    "jsx-a11y/media-has-caption": "off"
+  }
+}
