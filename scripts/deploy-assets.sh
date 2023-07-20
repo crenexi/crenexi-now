@@ -1,4 +1,4 @@
-s3_bucket_uri="s3://cn--now.crenexi.com"
+s3_bucket_uri="s3://cx--www.crenexi.com"
 s3_assets_uri="${s3_bucket_uri}/assets"
 target_env=$1
 
